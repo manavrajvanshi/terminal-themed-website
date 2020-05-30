@@ -1,0 +1,108 @@
+.boldFont{
+    color: rgb(122, 249, 79);
+    font-weight: bold;
+    font: 1em Inconsolata, monospace;
+    text-shadow: 0 0 5px green;
+}
+
+.lightFont{
+    color: rgb(122, 249, 79);
+    font: 1em Inconsolata, monospace;
+    text-shadow: 0 0 5px green;
+}
+
+.prompt{
+    color:#0000e6;
+    font-weight: bold;
+    font: 1em Inconsolata, monospace;
+}
+
+.cursor {
+    animation: blink 1s linear infinite;
+    color: white;
+    font: 1em Inconsolata, monospace;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+}
+
+.command{
+    color: white;
+    font: 1em Inconsolata, monospace;
+}
+
+.navFlexContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.navFlexItemHost{
+    /* border: 2px solid white; */
+   
+}
+
+.navFlexItemCommand{
+    /* border: 2px solid white; */
+}
+
+.navFlexItemLink{
+    /* border: 2px solid white; */
+    justify-content: space-between;
+}
+
+.navCursor {
+    animation: blink 1s linear infinite;
+    animation-fill-mode: forwards;
+    color: white;
+    font: 1em Inconsolata, monospace;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    50%{
+        opacity: 0;
+    }
+}
+
+.userCommand{
+    background-color: black;
+    border: none;
+    outline: none;
+    caret-color:white;
+    /* width: 80%; */
+}
+
+.loader{
+    color: rgb(122, 249, 79);
+    font: 1.5em Inconsolata, monospace;
+    display: flex;
+    justify-content: center;
+    animation: blinkLoader 1s linear infinite;
+    animation-fill-mode: forwards;
+}
+@keyframes blinkLoader {
+    50%{
+        opacity: 0;
+    }
+}
+
+.contentFlexContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contentFlexItem{
+
+}
