@@ -67,7 +67,10 @@ export default class Controller extends React.Component{
         );
         let content = (
             <div>
-                <Navbar onComplete = {this.navbarStatusChanger}/>
+                <Navbar 
+                    onComplete = {this.navbarStatusChanger}
+                    setPage = {this.setCurrentPage}
+                />
                 {this.state.navbarLoaded ? main : null}
             </div>
         );

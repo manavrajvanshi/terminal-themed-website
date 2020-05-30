@@ -13,6 +13,8 @@ export default class Navbar extends React.Component{
             hideCursor: false
         }
         this.listDirs = this.listDirs.bind(this);
+        this.clickHandler = this.clickHandler.bind(this);
+        this.linksArr = ["./Home.sh", "./AboutMe.sh", "./Projects.sh", "./Others.sh"]
     }
     
     listDirs(){
@@ -26,14 +28,15 @@ export default class Navbar extends React.Component{
         }, 1200) 
     }
 
+    clickHandler(link){
+        this.props.setPage(link);
+    }
     render(){
         // console.log(Styles.navFlexContainer)
-        let links = (
+        let links = this.linksArr.map( (link, index) => <span key ={index} onClick ={()=>this.clickHandler(link)} className = {Styles.command}>{link}</span>)
+        let linksComponent = (
             <span className = {Styles.navFlexContainer+" "+Styles.navFlexItemLink}>
-                <span className = {Styles.command}>./Home.sh</span>
-                <span className = {Styles.command}>./AboutMe.sh</span>
-                <span className = {Styles.command}>./Projects.sh</span>
-                <span className = {Styles.command}>./Others.sh</span>
+                {links}
             </span>
         );
         let navbar = (
@@ -53,7 +56,7 @@ export default class Navbar extends React.Component{
                 </span>
                 <br></br>
 
-                {this.state.commandCompleted ? links : null}
+                {this.state.commandCompleted ? linksComponent : null}
             </div>
             
 
